@@ -224,7 +224,6 @@
    box-sizing: border-box;
  }
  .mfp-container:before {
-   content: '';
    display: inline-block;
    height: 100%;
    vertical-align: middle;
