@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?j67whm');
-  src:  url('fonts/icomoon.eot?j67whm#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?j67whm') format('truetype'),
-    url('fonts/icomoon.woff?j67whm') format('woff'),
-    url('fonts/icomoon.svg?j67whm#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?hj62bi');
+  src:  url('fonts/icomoon.eot?hj62bi#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?hj62bi') format('truetype'),
+    url('fonts/icomoon.woff?hj62bi') format('woff'),
+    url('fonts/icomoon.svg?hj62bi#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,16 +25,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-rings:before {
-  content: "\e900";
-  color: #4d4d4d;
+.icon-friend3:before {
+  content: "\e904";
 }
-.icon-heart:before {
-  content: "\e901";
+.icon-friend2:before {
+  content: "\e905";
 }
 .icon-dove:before {
   content: "\e902";
 }
-.icon-friend:before {
+.icon-rings:before {
+  content: "\e900";
+}
+.icon-heart:before {
+  content: "\e901";
+}
+.icon-friend1:before {
   content: "\e903";
 }
