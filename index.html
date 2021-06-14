@@ -355,10 +355,10 @@
 <div class="heading-section ftco-animate pb-4">
 <h2 class="mb-3" style="font-size: 60px;">Message for the couple.</h2>
 </div>
-<form action="mailto:pinakpanighosh2@gmail.com" method="POST" enctype="multipart/form-data" class="rsvp-form ftco-animate">
+<form name="submit-to-google-sheet" class="rsvp-form ftco-animate">
 <div class="">
 <div class="form-group">
-<input type="text" class="form-control" placeholder="Name">
+<input type="text" name="name" class="form-control" placeholder="Name">
 </div>
 </div>
 <div class="">
@@ -372,7 +372,7 @@
 </div>
 <div class="">
 <div class="form-group mb-5">
-<textarea name="" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
+<textarea name="message" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
 </div>
 <div class="form-group">
 <input type="submit" value="Bless" class="btn btn-primary py-3 px-4">
@@ -453,6 +453,19 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/scrollax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill@8/dist/polyfill.min.js"></script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwgZNOqNd0yko8Loy2fZ7rmszYWT5vCAPeff-_e9F65HQR9vxecYTl7crOIIf0GQezL/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
 <script src="js/main.js"></script>
 </body>
 </html>
